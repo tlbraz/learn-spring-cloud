@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient("hello")
 @RequestMapping("/hello")
-public interface HelloService {
+public interface HelloServiceEndpoint {
 
         @GetMapping
         public String hello(@RequestParam(required = false) String name, @RequestHeader(value = "zuul", required = false) String zuul);

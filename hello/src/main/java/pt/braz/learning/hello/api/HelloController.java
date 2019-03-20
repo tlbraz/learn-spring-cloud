@@ -16,8 +16,8 @@ public class HelloController {
     @GetMapping
     public String hello(@RequestParam(required = false) String name, @RequestHeader(value = "zuul", required = false) String zuul) {
         String appName = port+"";
-        String hello = String.format("Hello Mr. %s! Greetings from %s!", name, appName );
-        return hello + (isEmpty(zuul) ? " - direct " : " - gateway ");
+        String via = isEmpty(zuul) ? "direct" : zuul;
+        return String.format("Hello Mr. %s! Greetings from %s! - request sent via %s ", name, appName, via);
     }
 
 }

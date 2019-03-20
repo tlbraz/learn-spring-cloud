@@ -27,7 +27,7 @@ public class BrazFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        ctx.addZuulRequestHeader("zuul", "zuul");
+        ctx.addZuulRequestHeader("zuul", "gateway");
         return null;
     }
 }
