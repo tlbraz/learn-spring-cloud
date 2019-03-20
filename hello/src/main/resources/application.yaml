@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: hello
+server:
+  port: 50002
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: false
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+ribbon:
+  eureka:
+    enabled: true
