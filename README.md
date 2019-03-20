@@ -1,4 +1,4 @@
-A project that puts into practice https://spring.io/projects/spring-cloud components suchs as
+A project that puts into practice https://spring.io/projects/spring-cloud-netflix components suchs as
 
 * Zuul
 * Eureka
